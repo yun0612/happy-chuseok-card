@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즐거운 추석</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="device.css">
+    <link rel="stylesheet" href="flip.css">
+    <script src="index.js"></script>
+    <script src="flip.js"></script>
+    <script src="music.js"></script>
+    <script src="share.js"></script>
+    <!-- Nanum Pen Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!-- Jua -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="postcard" class="rotate-0" onclick="flipImage()">
+        <img src="source\postcard.png" class="postcard-background"/>
+        <!-- 앞면 -->
+        <div class="face front">
+            <div id="msg-container">
+                <p class="p-message">메시지</p>
+                <p class="p-name hidden">from Zamon</p>
+            </div>
+        </div>
+        <!-- 뒷면 -->
+        <div class="face back">
+            <div class="photo-container">
+                <img src="source\photo02.jpg" class="photo"/>
+            </div>
+        </div>
+    </div>
+    <div id="btn-container">
+        <button class="btn-bgm" onclick="controlBgm()">재생</button>
+        <button onclick="renewMessage()">다른 문구 보기</button>
+        <button class="btn-share" onclick="shareMessage()">공유</button>
+    </div>
+    <audio loop id="audio-bgm">
+        <source src="source\tongtong.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>
